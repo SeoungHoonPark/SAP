@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sap.Member">
+	
+	<!-- 공통항목(필드)는 미리 지정  -->
+	<sql id="memberFiled">
+		SAP_USER_IDX AS m_idx,
+		SAP_USER_ID AS m_id,
+		SAP_USER_PW AS m_pw,
+		SAP_USER_NM AS m_nm,
+		SAP_USER_SEX AS m_sex,
+		SAP_USER_BIRTH AS m_birth,
+		SAP_USER_TEL AS m_tel,
+		SAP_USER_EMAIL AS m_email,
+		SAP_USER_LOGINDATE AS m_loginDate,
+		SAP_USER_DROPDATE AS m_dropDate,
+		SAP_USER_JOINDATE AS	m_joinDate
+	</sql>
+	
+	<!-- 로그인  -->
+	<select id="getLogin" parameterType="com.single_a_project.sqpapp.dto.LoginDTO" resultType="int">
+		SELECT
+			count(*) as cnt
+		FROM
+			SAP_USER
+		WHERE
+			SAP_USER_ID = #{m_id}
+		AND
+			SAPL_USER_PW = #{m_pw}
+	</select>
+	
+</mapper>

@@ -8,13 +8,13 @@
 		<setting name="defaultExecutorType" value="REUSE" />	
 	</settings>
 	
-	<!-- 
+	
 	<typeAliases>
-		<typeAlias alias="xxVO" type="com.single_a_project.sapapp.domain.xxVo"/>
+		<typeAlias alias="mVO" type="com.single_a_project.sapapp.domain.MemberVO"/>
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="com/single_a_project/sapapp/sql/xxxSQL.xml"/>
+		<mapper resource="com/single_a_project/sapapp/sql/MemberSQL.xml"/>
 	</mappers> 
-	-->
+	
 </configuration>
